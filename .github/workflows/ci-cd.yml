@@ -28,9 +28,7 @@ jobs:
 
       - name: Deploy to Google Cloud Run
         run: |
-          gcloud run deploy your-service \
+          gcloud run deploy capybara-webapp-cloud-run-service \
             --image chefskiss/express-capybara-webapp \
             --platform managed \
-            --region $REGION
-        env:
-          REGION: us-central1
+            --region europe-north1
