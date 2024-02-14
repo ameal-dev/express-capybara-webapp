@@ -6,6 +6,8 @@ app.get('/', (req, res) => {
 	res.sendFile(__dirname + '/capybara.gif');
 });
 
+console.log('testing credentials');
+
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);
 });
