@@ -24,12 +24,12 @@ jobs:
       - name: Authenticate with Google Cloud
         uses: google-github-actions/auth@main
         with:
-          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - name: Deploy to Google Cloud Run
         run: |
           gcloud run deploy your-service \
-            --image your-docker-repo \
+            --image chefskiss/express-capybara-webapp \
             --platform managed \
             --region $REGION
         env:
