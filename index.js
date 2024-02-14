@@ -7,6 +7,7 @@ app.get('/', (req, res) => {
 });
 
 console.log('testing credentials');
+console.log('testing credentials');
 
 app.listen(port, () => {
 	console.log(`Server is running on http://localhost:${port}`);
