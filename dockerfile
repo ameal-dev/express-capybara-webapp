@@ -10,6 +10,9 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+# Set the PORT environment variable to 8080
+ENV PORT=8080
+
+EXPOSE 8080
 
 CMD ["node", "index.js"]
